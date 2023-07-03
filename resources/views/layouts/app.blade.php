@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>TestApp</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -16,7 +16,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-white">
     <div class="relative sm:flex sm:justify-center min-h-screen bg-center bg-gray-50 dark:bg-gray-900">
         <main class="w-full">
             @yield('content')
