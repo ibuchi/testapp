@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-full h-full flex items-center">
+<div class="w-full h-screen flex items-center">
     <div class="bg-gray-200 p-8 rounded-lg lg:w-1/3 mx-auto shadow-md">
         <form method="POST" action="{{ route('auth.register') }}">
             @csrf

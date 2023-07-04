@@ -5,17 +5,21 @@
 
 <div class="px-10 py-5 overflow-hidden">
     <div class="">
-        <section class="bg-yellow-500 px-10 py-16 rounded-md font-sans">
-            <div class="text-end"><span class="text-white text-sm py-2 px-4 bg-yellow-500 rounded-md">{{ today()->toFormattedDayDateString() }}</span></div>
-            <h1 class="text-white text-md font-semibold text-xl">Good {{ now()->greet() }} 👋🏼, {{ Auth::user()->name }}</h1>
-            <span class="text-white text-sm font-semibold">Admin</span>
+        <section class="bg-yellow-500 px-10 py-16 rounded-md font-sans flex-col sm:flex sm:flex-row justify-between">
+            <div>
+                <h1 class="text-white text-md font-semibold sm:text-xl">Good {{ now()->greet() }} 👋🏼, {{ Auth::user()->name }}</h1>
+                <span class="text-white text-sm font-semibold">Admin</span>
+            </div>
+            <div class="sm:text-right">
+                <span class="text-white text-sm sm:py-2 mt-6 sm:px-4 bg-yellow-500 rounded-md">{{ today()->toFormattedDayDateString() }}</span>
+            </div>
         </section>
     </div>
 
     <div>
         <x-notification />
 
-        <div class="grid grid-cols-3 gap-6 py-6">
+        <div class="grid sm:grid-cols-3 grid-cols-1 gap-6 py-6">
             <div class="col-span-1 bg-yellow-900 px-5  rounded-md ">
                 <h2 class="text-white py-3 font-bold">Total users</h2>
                 <div class="flex flex-row justify-between py-3">
