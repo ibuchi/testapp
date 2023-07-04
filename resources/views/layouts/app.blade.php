@@ -9,6 +9,7 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 
@@ -17,7 +18,7 @@
 </head>
 
 <body class="antialiased bg-white">
-    <div class="relative sm:flex sm:justify-center min-h-screen bg-center bg-gray-50 dark:bg-gray-900">
+    <div class="relative sm:flex sm:justify-center min-h-screen bg-center bg-gray-50">
         <main class="w-full">
             @yield('content')
         </main>

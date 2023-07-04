@@ -3,8 +3,8 @@
 namespace App\Observers;
 
 use App\Models\User;
-use App\Notifications\AccountActivation;
-use App\Notifications\UserAccountStatus;
+use App\Notifications\AccountActivated;
+use App\Notifications\AccountCreated;
 
 class UserObserver
 {
@@ -13,7 +13,7 @@ class UserObserver
      */
     public function created(User $user): void
     {
-        $user->notify(new UserAccountStatus);
+        $user->notify(new AccountCreated);
     }
 
     /**
@@ -21,7 +21,9 @@ class UserObserver
      */
     public function updated(User $user): void
     {
-        $user->notify(new AccountActivation);
+        if ($user->isActive()) {
+            $user->notify(new AccountActivated);
+        }
     }
 
     /**

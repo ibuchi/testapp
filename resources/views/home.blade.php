@@ -7,23 +7,115 @@
         <x-navbar />
     </header>
 
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Welcome Home!</h1>
-                <p class="mt-6 text-lg leading-8 text-gray-600">Welcome to the homepage of your application. I hope you have an amazing experience!</p>
-                <div class="mt-10 flex items-center justify-center gap-x-6">
-                    <a href="" class="rounded-md bg-yellow-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 trasition duration-300">Let's go</a>
+
+
+    <div class="px-20 py-10">
+
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 sm:gap-8 my-10 font-sans">
+            <!-- card -->
+            <div class="bg-red-500 px-5  rounded-md ">
+                <h2 class="text-white py-3">Event Created</h2>
+                <div class="flex flex-row justify-between py-3">
+                    <span class="text-white text-xl font-semibold">30</span>
+                    <span class="w-10 h-10 rounded-full bg-slate-100/50 text-white flex justify-center items-center"><i class='bx bx-detail text-xl'></i></span>
                 </div>
             </div>
-        </div>
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-    </div>
-</div>
+            <!-- card -->
+            <div class="bg-blue-700 px-5  rounded-md ">
+                <h2 class="text-white py-3">Event Created</h2>
+                <div class="flex flex-row justify-between py-3">
+                    <span class="text-white text-xl font-semibold">30</span>
+                    <span class="w-10 h-10 rounded-full bg-slate-100/50 text-white flex justify-center items-center"><i class='bx bx-detail text-xl'></i></span>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="bg-blue-500 px-5 rounded-md ">
+                <h2 class="text-white py-3">Event Created</h2>
+                <div class="flex flex-row justify-between py-3">
+                    <span class="text-white text-xl font-semibold">30</span>
+                    <span class="w-10 h-10 rounded-full bg-slate-100/50 text-white flex justify-center items-center"><i class='bx bx-detail text-xl'></i></span>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="bg-blue-700 px-5  rounded-md ">
+                <h2 class="text-white py-3">Event Created</h2>
+                <div class="flex flex-row justify-between py-3">
+                    <span class="text-white text-xl font-semibold">30</span>
+                    <span class="w-10 h-10 rounded-full bg-slate-100/50 text-white flex justify-center items-center"><i class='bx bx-detail text-xl'></i></span>
+                </div>
+            </div>
+        </section>
 
-@endsection
+        <section class="grid grid-cols-1  lg:grid-cols-4 gap-y-8 lg:gap-x-8 my-10 font-sans">
+            <div class="col-span-3 bg-white  rounded-md">
+                <div class="flex flex-row justify-between">
+                    <h2 class="text-gray-700 font-semibold p-10">Incomplete Order</h2>
+                    <a href="#" class="text-red-400 text-xs p-10">
+                        <i class="bx bx-signal-5 text-left my-auto text-yellow-400"></i>
+                        View All Order
+                    </a>
+                </div>
+                <table class="w-full table table-fixed">
+                    <thead>
+                        <tr class="text-left border-b-2 shadow-md ">
+                            <th class="text-gray-700 font-semibold uppercase text-sm pl-10">Customer</th>
+                            <th class="text-gray-700 font-semibold uppercase text-sm ">Order ID</th>
+                            <th class="text-gray-700 font-semibold uppercase text-sm ">Amount</th>
+                            <th class="text-gray-700 font-semibold uppercase text-sm ">Date</th>
+                            <th class="text-gray-700 font-semibold uppercase text-sm ">Status</th>
+                            <th class="text-gray-700 font-semibold uppercase text-sm pr-10">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-gray-700 font-normal text-sm p-10 text-center" colspan="6">No pending orer available...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-span-1 grid grid-cols-2 lg:grid-cols-1 gap-8">
+                <!-- card -->
+                <div class="bg-white px-5  rounded-md  py-3">
+                    <h2 class="text-blue-700 pb-3 font-bold">Orders</h2>
+                    <div class="flex flex-row justify-between ">
+                        <div class="">
+                            <div class="flex flex-row">
+                                <div class="w-10 h-10 bg-blue-900 rounded-full  border  border-gray-300  overflow-hidden mr-1">
+                                    <img src="" alt="avatar" class="w-full object-cover">
+                                </div>
+                                <div>
+                                    <h1 class="text-gray-700 text-sm font-semibold ">$0.00</h1>
+                                    <span class="text-red-500 text-xs">Total - 0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div><i class="bx bx-signal-5 text-left my-auto  text-2xl  text-yellow-400"></i></div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="bg-white px-5  rounded-md  py-3">
+                    <h2 class="text-blue-700 pb-3 font-bold">Orders</h2>
+                    <div class="flex flex-row justify-between ">
+                        <div class="">
+                            <div class="flex flex-row">
+                                <div class="w-10 h-10 bg-blue-900 rounded-full  border  border-gray-300   overflow-hidden mr-1">
+                                    <img src="" alt="avatar" class="w-full object-cover">
+                                </div>
+                                <div>
+                                    <h1 class="text-gray-700 text-sm font-semibold ">$0.00</h1>
+                                    <span class="text-red-500 text-xs">Total - 0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div><i class="bx bx-signal-5 text-left my-auto  text-2xl  text-green-400"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    @endsection

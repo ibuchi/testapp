@@ -3,7 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LandingController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,22 +17,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LandingController::class, 'landing'])->name('landing');
-
-Route::view('/register', 'auth.register')->name('register');
+Route::view('/', 'landing')->name('landing');
 Route::view('/login', 'auth.login')->name('login');
+Route::view('/register', 'auth.register')->name('register');
+Route::view('/success', 'auth.success')->name('success');
 
-Route::controller(AuthController::class)->group(function () {
-    Route::post('/register', 'register')->name('auth.register');
-    Route::post('/login', 'login')->name('auth.login');
-    Route::post('/logout', 'logout')->name('auth.logout');
+Route::controller(AuthController::class)->prefix('auth')->name('auth.')->group(function () {
+    Route::post('/register', 'register')->name('register');
+    Route::post('/login', 'login')->name('login');
+    Route::post('/logout', 'logout')->name('logout');
 });
 
-Route::get('/home', [HomeController::class, 'home'])->name('home')->middleware(['auth']);
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::put('/dashboard/{user}', [DashboardController::class, 'status'])->name('status');
-
+Route::middleware(['auth', 'active'])->group(function () {
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::put('/users/{user}', UserController::class)->name('users.update');
 });
-

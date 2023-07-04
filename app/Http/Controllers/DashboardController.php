@@ -7,19 +7,18 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function dashboard()
+    /**
+     * @return [type]
+     */
+    public function __invoke()
     {
-        $users = User::latest()->get();
+        if (auth()->user()->is_admin) {
+            $users = User::latest()->get();
+            $activeUsers =  User::activeCount();
+            $inactiveUsers =  User::inactiveCount();
+            return view('dashboard.admin', compact('users', 'activeUsers', 'inactiveUsers'));
+        }
 
-        return view('dashboard', compact('users'));
+        return view('dashboard.user');
     }
-
-    public function status(User $user)
-    {
-        $user->status = 'Active';
-        $user->update();
-
-        return back();
-    }
-
 }
