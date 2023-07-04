@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-full h-full flex items-center">
-    <div class="bg-gray-200 p-8 rounded-lg w-1/3 mx-auto shadow-md">
+<div class="w-full h-screen flex items-center justify-center">
+    <div class="bg-gray-200 p-8 rounded-lg lg:w-1/3 mx-auto shadow-md">
         <x-notification />
         <form method="POST" action="{{ route('auth.login') }}">
             @csrf

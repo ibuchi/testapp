@@ -28,7 +28,7 @@ class AuthRequest extends FormRequest
     {
         return [
             'name' => Rule::when($this->routeIs('auth.register'), 'required'),
-            'email' => 'required|string|email',
+            'email' => ['required', 'email', Rule::when($this->routeIs('auth.register'), 'unique:users')],
             'password' => ['required', 'string', Rule::when($this->routeIs('auth.register'), 'confirmed')],
         ];
     }
